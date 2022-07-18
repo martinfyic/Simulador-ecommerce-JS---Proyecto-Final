@@ -1,0 +1,112 @@
+.topheader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.5s linear 0s;
+}
+
+.scrollMenu {
+    background-color: var(--theme-color);
+}
+
+/* layout navegador */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* logo */
+.logo_header {
+    width: 250px;
+    height: auto;
+}
+
+.logo_menuRespon {
+    display: none;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 20px;
+}
+
+.menu li a {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 80px;
+}
+
+/* anulo los botones responsive en nomobile */
+.open-menu,
+.close-menu {
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 1080px) {
+
+    /* logo */
+    .logo_header {
+        width: 207px;
+        height: 100px;
+    }
+
+    /* menu */
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        background-color: var(--menu-mobile-backgorund-color);
+        overflow-y: auto;
+        transition: all 0.5s ease 0s;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .logo_menuRespon {
+        display: block;
+        width: 180px;
+        height: 90px;
+    }
+
+    .menu li a {
+        font-size: 16px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-menu{
+        align-self: flex-end;
+        padding: 40px 15px;
+    }
+
+    .menu_abrir {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+}

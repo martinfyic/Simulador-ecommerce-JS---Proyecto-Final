@@ -1,0 +1,75 @@
+/* variable de colores */
+:root{
+    --theme-color: #ffffff;
+    --primary-color: #828b86;
+    --secundary-color: #951e1f;
+    --text-color: #000000;
+    --text-color-inverse: #9b8464;
+    --text-shallow: #802527;
+    --menu-mobile-backgorund-color: #fcf5e8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.hero{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.moderntay{
+    padding: 50px 30px;
+}
+
+.moderntay h1{
+    padding: 200px 0;
+    font-size: 70px;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--secundary-color);
+    font-weight: 700;
+    text-shadow: 1px 1px var(--text-shallow);
+    text-align: center;
+}
+
+/* reseteo card */
+.card{
+    background: none;
+    z-index: 1;
+}
+
+/* carrito */
+.titulo_carrito{
+    padding: 100px 0;
+    font-size: 70px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+    .moderntay h1{
+        padding: 80px 0;
+        font-size: 50px;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--secundary-color);
+        font-weight: 700;
+        text-shadow: 1px 1px var(--text-shallow);
+        text-align: center;
+    }
+
+}
