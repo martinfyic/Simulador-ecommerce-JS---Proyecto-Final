@@ -25,7 +25,7 @@ function dibujarCarrito() {
         <td class="align-middle py-3"><strong>Total a Pagar</strong></td>
         <td class="align-middle py-3"><strong>$U ${suma}</strong></td>
         <td class="align-middle py-3">&nbsp;</td>
-        <td class="text-end align-middle py-3" title="Finalizar compra"><a class="btn btn-dark fw-bold border-0">Pagar</a></td>
+        <td class="text-end align-middle py-3" title="Finalizar compra"><a href="./compra.html" class="btn btn-dark fw-bold border-0">Finalizar Compra</a></td>
         `;
         contenidoCard += `</table>`;
     }

@@ -21,12 +21,13 @@
     <!-- mis css -->
     <link rel="stylesheet" href="./css/estilonav.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/formulario.css">
 </head>
 
 <body>
-    <header class="topheader">
+    <header class="topheader formulario_header">
         <nav class="topnav">
-            <a href="#" class="logo">
+            <a href="./index.html" class="logo">
                 <img src="./img/logo.png" alt="logo empresa" class="logo_header">
             </a>
             <!-- boton abrir menu desplegable mobile -->
@@ -39,47 +40,59 @@
                     <img width="50px" height="50px" src="./img/cross-menu.png" alt="Cerrar menú" width="">
                 </button>
                 <li><a href="./index.html"><img src="./img/logo.png" class="logo_menuRespon" alt="logo"></a></li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#modern_tayloring">Modern Tayloring</a></li>
-                <li><a href="#retro_street">Retro Streetwear</a></li>
+                <li><a href=".#home">Home</a></li>
+                <li><a href=".#modern_tayloring">Modern Tayloring</a></li>
+                <li><a href=".#retro_street">Retro Streetwear</a></li>
                 <!-- menu carrito-->
                 <li id="btn_carrito" title="Ir a la Cesta">
                 </li>
             </ul>
         </nav>
     </header>
-    <!--  hero  -->
-    <section id="home" class="container-fluid hero">
-        <div class="row">
-            <div class="col">
-                <img src="./img/hero_1.jpeg" alt="" width="100%">
+
+    <!-- formulario -->
+    <section class="formulario">
+        <h3 class="fs-1 text-center mt-5">Finalizar compra</h3>
+        <p class="fs-6 text-center my-3">Completa los siguientes datos para realizar la compra online</p>
+        <div id="Contacto" class="container-fluid p-3 row">
+            <!-- hero L -->
+            <div class="container col-md-4">
+                <div class="d-flex justify-content-center">
+                    <img src="./img/form_L.jpeg" alt="" class="w-75">
+                </div>
+            </div>
+            <!-- formulario -->
+            <div class="container my-5 col-md-4">
+                <div class="my-5">
+                    <label for="Input1" title="Ingrese su correo electronico" class="form-label pt-2">Correo
+                        electrónico</label>
+                    <input type="email" class="form-control mb-3" id="Input1">
+                    <label for="Input2" title="Ingrese su nombre y apellido" class="form-label pt-2">Nombre y
+                        Apellido</label>
+                    <input type="text" class="form-control mb-3" id="Input2">
+                    <label for="Input3" title="Ingrese su télefono" class="form-label pt-2">Teléfono</label>
+                    <input type="tel" class="form-control mb-3" id="Input3">
+                    <label for="Input4" title="Ingrese la dirección para hacer el envío"
+                        class="form-label pt-2">Dirección
+                        de envío</label>
+                    <input type="text" class="form-control mb-3" id="Input4">
+                    <label for="Input5" title="Ingrese los números de su tarjeta de crédito para realizar la compra"
+                        class="form-label pt-2">Nro de tarjeta de crédito</label>
+                    <input type="text" class="form-control mb-3" id="Input5">
+                </div>
+                <!-- div para mostrar validacion -->
+                <div class="container" id="validacion"> </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" id="btn_enviar" class="btn btn-dark">Pagar</button>
+                </div>
+            </div>
+            <!-- hero R -->
+            <div class="container col-md-4">
+                <div class="d-flex justify-content-center">
+                    <img src="./img/form_R.jpeg" alt="" class="w-75">
+                </div>
             </div>
         </div>
-    </section>
-    <!-- hero 2 -->
-    <section>
-        <div class="container p-5">
-            <div class="row">
-                <div class="col p-1">
-                    <img src="./img/hero_2.jpeg" alt="" class="w-100">
-                </div>
-                <div class="col p-1">
-                    <img src="./img/hero_3.jpeg" alt="" class="w-100">
-                </div>
-            </div>
-    </section>
-    <!-- Modern Tayloring -->
-    <section class="moderntay">
-        <h1 id="modern_tayloring">Modern Tayloring</h1>
-        <div id="contenedor_cards" class="row"></div>
-    </section>
-
-    <!-- hero render -->
-    <section id="contenedor_hero"></section>
-    <!-- Classic Workwear -->
-    <section class="moderntay">
-        <h1 id="retro_street">Retro Streetwear</h1>
-        <div id="contenedor_cards_retro" class="row"></div>
     </section>
 
     <!-- bootstap script -->
@@ -87,10 +100,6 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
     <!-- mis script -->
-    <script src="./js/funciones.js"></script>
-    <script src="./js/productos.js"></script>
-    <script src="./js/hero.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/sweetalert.js"></script>
     <!-- seetalert -->
