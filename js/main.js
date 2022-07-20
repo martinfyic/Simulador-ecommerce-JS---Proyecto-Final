@@ -37,7 +37,7 @@ function dibujarProductosRetro() {
                     <div class="card-body d-flex align-items-center flex-column justify-content-around">
                     <h5 class="fs-6">${producto.nombre}</h5>
                     <p class="card-text text-secondary">$U ${producto.precio}</p>
-                    <a class="btn text-dark fw-bold border-0" title="Agregar al carrito" onclick="agregarAlCarrito(${producto.id})">Agregar</a>
+                    <a id="btn_agregarAlCarrito${producto.id}" class="btn text-dark fw-bold border-0" title="Agregar al carrito" onclick="agregarAlCarrito(${producto.id})">Agregar</a>
                     </div>
                 </div>
             </div>

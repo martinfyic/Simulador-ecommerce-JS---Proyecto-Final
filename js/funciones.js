@@ -1,5 +1,5 @@
 function retornarProdCarrito() {
-    return JSON.parse(localStorage.getItem("carrito")) || [];
+    return JSON.parse(localStorage.getItem("carrito")) || []; // ternario
 }
 
 function guardarProdCarrito(productos) {
@@ -18,12 +18,12 @@ function actualizarBtnCarrito() {
     let total = 0;
 
     if (productos.length > 0) {
-        for (let producto of productos){
+        for (let producto of productos) {
             total += producto.cantidad;
         }
 
         contenido = `
-            <a href="./carrito.html">
+            <a title="Cesta de compras" href="./carrito.html">
                 <img src="./img/imgcarrito.svg" alt="imagen de carrito de compras" width="60px" height="60px">
                 <span>${total}</span>
             </a>
@@ -33,10 +33,43 @@ function actualizarBtnCarrito() {
     document.getElementById("btn_carrito").innerHTML = contenido;
 }
 
-function vaciarCarrito () {
-    localStorage.removeItem("carrito");
-    actualizarBtnCarrito();
-    dibujarCarrito();
+function vaciarCarrito() {
+    Swal.fire({
+        title: 'Estas seguro?',
+        text: "Se eliminaran todos los articulos!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d3d3d4',
+        cancelButtonColor: '#000000',
+        confirmButtonText: 'Si, eliminar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let timerInterval
+            Swal.fire({
+                title: 'Eliminando articulos!',
+                html: 'La cesta se vaciara en <b></b> milisegundos.',
+                timer: 2000,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                    const b = Swal.getHtmlContainer().querySelector('b')
+                    timerInterval = setInterval(() => {
+                        b.textContent = Swal.getTimerLeft()
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+            }).then((result) => {
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log('I was closed by the timer')
+                }
+            })
+            localStorage.removeItem("carrito");
+            actualizarBtnCarrito();
+            dibujarCarrito();
+        }
+    })
 }
 
 function agregarAlCarrito(id) {
@@ -53,6 +86,7 @@ function agregarAlCarrito(id) {
 
     guardarProdCarrito(productos_carrito);
     actualizarBtnCarrito();
+    itemAgregado()
 }
 
 function eliminarDelCarrito(id) {
@@ -67,4 +101,5 @@ function eliminarDelCarrito(id) {
     guardarProdCarrito(productos_carrito);
     actualizarBtnCarrito();
     dibujarCarrito();
+    itemEliminado();
 }
