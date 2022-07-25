@@ -8,7 +8,9 @@
     <title>Simulador e-commer | Martin Ferreira Yic</title>
     <link rel="shortcut icon" href="./img/logo_2.svg" type="image/x-icon">
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google font Montserrat-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +26,10 @@
     <link rel="stylesheet" href="./css/estilonav.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/formulario.css">
+    <!-- Cleave -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"
+        integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </head>
 
 <body>
@@ -45,8 +51,6 @@
                 <li><a href=".#home">Home</a></li>
                 <li><a href=".#modern_tayloring">Modern Tayloring</a></li>
                 <li><a href=".#retro_street">Retro Streetwear</a></li>
-                <!-- <li><a href="./carrito.html">Volver a la Cesta</a></li> -->
-                <!-- menu carrito-->
                 <li id="btn_carrito" title="Ir a la Cesta">
             </ul>
         </nav>
@@ -54,8 +58,8 @@
 
     <!-- formulario -->
     <section class="formulario">
-        <h3 class="fs-1 text-center mt-5">Finalizar compra</h3>
-        <p class="fs-6 text-center my-3">Completa los siguientes datos para realizar la compra online</p>
+        <h3 class="fs-1 text-center mt-5">Finalizar</h3>
+        <p class="fs-6 text-center my-3 px-3">Completa los siguientes datos para realizar la compra online</p>
         <div id="Contacto" class="container-fluid p-3 row">
             <!-- hero L -->
             <div class="container col-md-4">
@@ -64,32 +68,47 @@
                 </div>
             </div>
             <!-- formulario -->
-            <div class="container my-5 col-md-4">
-                <div class="my-5">
-                    <label for="Input1" title="Ingrese su correo electronico" class="form-label pt-2">Correo
+            <div id="datos-formulario" class="container mt-5 col-md-4">
+                <form class="mt-5" id="formulario-contenedor">
+                    <!-- mail -->
+                    <label for="Input_email" title="Ingrese su correo electronico" class="form-label pt-2 testCleave">Correo
                         electrónico</label>
-                    <input type="email" class="form-control mb-3" id="Input1">
-                    <label for="Input2" title="Ingrese su nombre y apellido" class="form-label pt-2">Nombre y
+                    <input type="email" class="form-control mb-3 testCleave" id="Input_email">
+                    <div id="mailError"></div>
+                    <!-- nombre -->
+                    <label for="Input_nombre" title="Ingrese su nombre y apellido" class="form-label pt-2">Nombre y
                         Apellido</label>
-                    <input type="text" class="form-control mb-3" id="Input2">
-                    <label for="Input3" title="Ingrese su télefono" class="form-label pt-2">Teléfono</label>
-                    <input type="tel" class="form-control mb-3" id="Input3">
-                    <label for="Input4" title="Ingrese la dirección para hacer el envío"
+                    <input type="text" class="form-control mb-3" id="Input_nombre">
+                    <div id="nombreError"></div>
+                    <!-- telefono -->
+                    <label for="input-phone" title="Ingrese su télefono" class="form-label pt-2">Teléfono</label>
+                    <input type="text" class="form-control mb-3" id="input-phone">
+                    <div id="telError"></div>
+                    <!-- direccion -->
+                    <label for="Input_dire" title="Ingrese la dirección para hacer el envío"
                         class="form-label pt-2">Dirección
                         de envío</label>
-                    <input type="text" class="form-control mb-3" id="Input4">
-                    <label for="Input5" title="Ingrese los números de su tarjeta de crédito para realizar la compra"
+                    <input type="text" class="form-control mb-3" id="Input_dire">
+                    <div id="direError"></div>
+                    <!-- tarjeta -->
+                    <label for="Input_tarjeta" title="Ingrese los números de su tarjeta de crédito para realizar la compra"
                         class="form-label pt-2">Nro de tarjeta de crédito</label>
-                    <input type="text" class="form-control mb-3" id="Input5">
-                </div>
+                    <input type="text" class="form-control mb-3" id="Input_tarjeta">
+                    <div id="tcVacia"></div>
+                </form>
+                <!-- mensaje nro tc incorrecto -->
+                <div class="container" id="error_tc"></div>
+                <!-- iconos de TC -->
                 <i class="fa-brands fa-cc-amex" title="American Express"></i>
                 <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
                 <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                
+                <div class="d-flex justify-content-center mb-3">
+                    <button type="button" id="btn_realizarPago" class="btn btn-dark mx-2" onclick="comprar()">Pagar</button>
+                    <button type="reset" id="btn_limpiar" class="btn btn-dark mx-2">Limpiar</button>
+                </div>
                 <!-- div para mostrar validacion -->
                 <div class="container" id="validacion"> </div>
-                <div class="d-flex justify-content-center">
-                    <button type="button" id="btn_enviar" class="btn btn-dark">Pagar</button>
-                </div>
             </div>
             <!-- hero R -->
             <div class="container col-md-4">
@@ -104,6 +123,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
+    <!-- Cleave -->
+    <script src="./js/cleave.min.js"></script>
+    <script src="./js/cleave-phone.uy.js"></script>
     <!-- mis script -->
     <script src="./js/navbar.js"></script>
     <script src="./js/funciones.js"></script>

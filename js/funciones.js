@@ -1,5 +1,5 @@
 function retornarProdCarrito() {
-    return JSON.parse(localStorage.getItem("carrito")) || []; // ternario
+    return JSON.parse(localStorage.getItem("carrito")) || []; 
 }
 
 function guardarProdCarrito(productos) {
@@ -48,7 +48,7 @@ function vaciarCarrito() {
             Swal.fire({
                 title: 'Eliminando articulos!',
                 html: 'La cesta se vaciara en <b></b> milisegundos.',
-                timer: 2000,
+                timer: 1500,
                 timerProgressBar: true,
                 didOpen: () => {
                     Swal.showLoading()
@@ -72,22 +72,19 @@ function vaciarCarrito() {
     })
 }
 
+
 function agregarAlCarrito(id) {
     let productos_carrito = retornarProdCarrito();
     let articulo = productos_carrito.findIndex(x => x.id == id);
 
-    if (articulo > -1) {
-        productos_carrito[articulo].cantidad += 1;
-    } else {
-        let producto = buscarProd(id);
-        producto.cantidad = 1;
-        productos_carrito.push(producto);
-    }
+    (articulo > -1) ? productos_carrito[articulo].cantidad += 1 : (producto = buscarProd(id), producto.cantidad = 1, productos_carrito.push(producto) ) 
 
     guardarProdCarrito(productos_carrito);
     actualizarBtnCarrito();
     itemAgregado()
 }
+
+
 
 function eliminarDelCarrito(id) {
     let productos_carrito = retornarProdCarrito();

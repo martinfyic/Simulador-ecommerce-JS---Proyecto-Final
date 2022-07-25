@@ -7,3 +7,14 @@
     margin-bottom: 20px;
     padding: 0 10px;
 }
+
+.fa-brands{
+    opacity: 0.4;
+    transition: all 0.5s linear 0s;
+}
+
+.tcActiva{
+    opacity: 1;
+    transform: scale(1.2);
+    transition: all 0.5s linear 0s;
+}

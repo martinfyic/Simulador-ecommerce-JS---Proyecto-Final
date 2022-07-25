@@ -24,7 +24,6 @@ function itemEliminado() {
 function finalizarCompra() {
     Swal.fire({
         title: 'Continuar con la compra?',
-        // text: "You won't be able to revert this!",
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#000000',
@@ -34,5 +33,17 @@ function finalizarCompra() {
         if (result.isConfirmed) {
             window.location.href = "./compra.html"
         }
+    })
+}
+
+function graciasCompra() {
+    Swal.fire({
+        title: 'Gracias por tú compra!',
+        imageUrl: './img/logo.png',
+        imageWidth: 380,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+        showConfirmButton: false,
+        timer: 1100
     })
 }
