@@ -10,7 +10,7 @@ function actualizarBtnCarrito() {
     let productos = retornarProdCarrito();
     let contenido = `
     <a href="#">
-        <img src="./img/imgcarrito.svg" alt="imagen de carrito de compras" width="60px" height="60px">
+        <img src="./img/imgcarrito.svg" alt="imagen de carrito de compras" width="40px" height="40px">
         <span>0</span>
     </a>
     `;
@@ -24,7 +24,7 @@ function actualizarBtnCarrito() {
 
         contenido = `
             <a title="Cesta de compras" href="./carrito.html">
-                <img src="./img/imgcarrito.svg" alt="imagen de carrito de compras" width="60px" height="60px">
+                <img src="./img/imgcarrito.svg" alt="imagen de carrito de compras" width="40px" height="40px">
                 <span>${total}</span>
             </a>
             `;
@@ -37,7 +37,6 @@ function vaciarCarrito() {
     Swal.fire({
         title: 'Estas seguro?',
         text: "Se eliminaran todos los articulos!",
-        icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#d3d3d4',
         cancelButtonColor: '#000000',
@@ -62,7 +61,6 @@ function vaciarCarrito() {
                 }
             }).then((result) => {
                 if (result.dismiss === Swal.DismissReason.timer) {
-                    console.log('I was closed by the timer')
                 }
             })
             localStorage.removeItem("carrito");

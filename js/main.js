@@ -49,7 +49,27 @@ function dibujarProductosRetro() {
     document.getElementById("contenedor_cards_retro").innerHTML = contenidoCard;
 }
 
-guardarProdLocalS(productos);
+const herohtml = document.getElementById("contenedor_hero");
+
+fetch(`./JSON/heros.json`)
+    .then((res) => res.json())
+    .then((respuesta) => {
+            respuesta.forEach((hero) => {
+                let div = document.createElement("div");
+                div.className = "heros";
+                div.innerHTML = `
+                <section class="container py-5">
+                <div class="row">
+                <picture class="col d-flex justify-content-center">
+                    <img src="${hero.imagen}" alt="" width="90%">
+                </picture>
+                </div>
+                </section>
+                `;
+                herohtml.appendChild(div);
+            });
+    })
+
 actualizarBtnCarrito();
 dibujarProductos();
 dibujarProductosRetro();

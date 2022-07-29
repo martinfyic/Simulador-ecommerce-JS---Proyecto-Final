@@ -11,7 +11,6 @@ class DatosForm {
 function comprar() {
     Swal.fire({
         title: 'Finalizar la compra?',
-        icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#000000',
         cancelButtonColor: '#d3d3d4',
@@ -77,10 +76,10 @@ function comprar() {
                 graciasCompra()
                 let formulario = document.getElementById("datos-formulario");
                 formulario.innerHTML = "";
-                formulario.innerHTML = `<p class="text-center fs-4 mt-5">Gracias por tu compra ${nombreform}! Entregaremos tu pedido a la dirección ${direccionform} en las próximas 48hs, te anviamos todos los detalles al correo ${mailform} </p>`;
+                formulario.innerHTML = `<p class="text-center fs-4 mt-5">Gracias por tu compra <strong>${nombreform}!</strong> Entregaremos tu pedido a la dirección <strong>${direccionform}</strong> en las próximas 48hs, te anviamos todos los detalles al correo <strong>${mailform}</strong> </p>`;
                 setTimeout(() => {
                     window.location.href = "./index.html"
-                }, 8000)
+                }, 9000)
             }
         }
     })
@@ -104,8 +103,5 @@ let validacionTel = new Cleave(`#input-phone`, {
     phone: true,
     phoneRegionCode: `UY`,
 });
-
-// validacion campos vacios en el formulario
-
 
 actualizarBtnCarrito();

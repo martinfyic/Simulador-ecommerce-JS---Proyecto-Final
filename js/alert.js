@@ -1,30 +1,30 @@
 // modal agregar al carrito
 function itemAgregado() {
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Articulo agregado',
-        showConfirmButton: false,
-        timer: 1000
-    })
+    Toastify({
+        text: "Agregado a la Cesta",
+        duration: 2000,
+        style: {
+            background: "#000000",
+            padding: "20px",
+        },
+    }).showToast();
 }
 
 // modal eliminar del carrito
 function itemEliminado() {
-    Swal.fire({
-        position: 'top-end',
-        icon: 'error',
-        title: 'Articulo eliminado',
-        showConfirmButton: false,
-        timer: 1000
-    })
+    Toastify({
+        text: "Eliminado de la Cesta",
+        duration: 2000,
+        style: {
+            background: "#000000",
+        },
+    }).showToast();
 }
 
 //modal ir a pagar
 function finalizarCompra() {
     Swal.fire({
         title: 'Continuar con la compra?',
-        icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#000000',
         cancelButtonColor: '#d3d3d4',
@@ -36,6 +36,7 @@ function finalizarCompra() {
     })
 }
 
+// agradecimiento
 function graciasCompra() {
     Swal.fire({
         title: 'Gracias por tú compra!',

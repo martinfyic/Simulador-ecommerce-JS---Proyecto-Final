@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "nombre": "PANTALÓN RAYA TRAJE",
+        "precio": 2790,
+        "imagen": "./img/producto_1.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 2,
+        "nombre": "BLAZER RAYA TRAJE",
+        "precio": 5990,
+        "imagen": "./img/producto_2.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 3,
+        "nombre": "PANTALÓN SLIM TRAJE",
+        "precio": 2790,
+        "imagen": "./img/producto_3.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 4,
+        "nombre": "BLAZER TRAJE",
+        "precio": 2790,
+        "imagen": "./img/producto_4.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 5,
+        "nombre": "BERMUDA TÉCNICA TRAJE",
+        "precio": 2190,
+        "imagen": "./img/producto_5.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 6,
+        "nombre": "BLAZER TÉCNICA TRAJE",
+        "precio": 4990,
+        "imagen": "./img/producto_6.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 7,
+        "nombre": "BLAZER CRUZADA TRAJE",
+        "precio": 6590,
+        "imagen": "./img/producto_7.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 8,
+        "nombre": "PANTALÓN PLIEGUES TRAJE",
+        "precio": 2390,
+        "imagen": "./img/producto_8.jpeg",
+        "categoria": 1
+    },
+    {
+        "id": 9,
+        "nombre": "SOBRECAMISA CUADROS",
+        "precio": 3590,
+        "imagen": "./img/producto_9.jpeg",
+        "categoria": 2
+    },
+    {
+        "id": 10,
+        "nombre": "CAZADORA ACOLCHADA",
+        "precio": 4190,
+        "imagen": "./img/producto_10.jpeg",
+        "categoria": 2
+    },
+    {
+        "id": 11,
+        "nombre": "JERSEY CUELLO",
+        "precio": 2590,
+        "imagen": "./img/producto_11.jpeg",
+        "categoria": 2
+    },
+    {
+        "id": 12,
+        "nombre": "FRANELA CUADROS",
+        "precio": 4390,
+        "imagen": "./img/producto_12.jpeg",
+        "categoria": 2
+    },
+    {
+        "id": 13,
+        "nombre": "PARKA ACOLCHADA",
+        "precio": 5990,
+        "imagen": "./img/producto_13.jpeg",
+        "categoria": 2
+    },
+    {
+        "id": 14,
+        "nombre": "CAZADORA ACOLCHADA ORANGE",
+        "precio": 3390,
+        "imagen": "./img/producto_14.jpeg",
+        "categoria": 2
+    },
+    {
+        "id": 15,
+        "nombre": "SOBRECAMISA CUADROS",
+        "precio": 3590,
+        "imagen": "./img/producto_15.jpeg",
+        "categoria": 2
+    },
+    {
+        "id": 16,
+        "nombre": "PARKA ACOLCHADA",
+        "precio": 5990,
+        "imagen": "./img/producto_16.jpeg",
+        "categoria": 2
+    }
+]

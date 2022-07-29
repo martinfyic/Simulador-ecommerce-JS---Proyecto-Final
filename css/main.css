@@ -1,5 +1,5 @@
 /* variable de colores */
-:root{
+:root {
     --theme-color: #ffffff;
     --primary-color: #828b86;
     --secundary-color: #951e1f;
@@ -9,34 +9,51 @@
     --menu-mobile-backgorund-color: #fcf5e8;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--theme-color);
     color: var(--text-color);
 }
 
+/* --------barra de scroll para chroms--------- */
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--theme-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+}
+
+/* reseteo general */
 a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-.hero{
+.hero {
     padding: 0;
     margin: 0;
     overflow: hidden;
 }
 
-.moderntay{
+.moderntay {
     padding: 50px 30px;
 }
 
-.moderntay h1{
+.moderntay h1 {
     padding: 200px 0;
     font-size: 70px;
     font-family: 'Cormorant Garamond', serif;
@@ -47,13 +64,13 @@ a {
 }
 
 /* reseteo card */
-.card{
+.card {
     background: none;
     z-index: 1;
 }
 
 /* carrito */
-.titulo_carrito{
+.titulo_carrito {
     padding: 100px 0;
     font-size: 70px;
     font-family: 'Cormorant Garamond', serif;
@@ -61,8 +78,35 @@ a {
     text-align: center;
 }
 
+.parrafoFoot {
+    font-size: 15px;
+}
+
+.icono-media {
+    color: var(--text-color);
+    font-size: 25px;
+    position: relative;
+}
+
+.icono-media::after {
+    content: "";
+    background-color: var(--text-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icono-media:hover:after {
+    opacity: 0.8;
+}
+
+
 @media screen and (max-width: 1080px) {
-    .moderntay h1{
+    .moderntay h1 {
         padding: 80px 0;
         font-size: 50px;
         font-family: 'Cormorant Garamond', serif;

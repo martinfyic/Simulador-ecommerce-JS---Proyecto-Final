@@ -8,11 +8,7 @@
 }
 
 .scrollMenu {
-    /* Op 1 */
-    /* background-color: var(--theme-color); */
-
-    /* Op 2 */
-    background: rgba( 255, 255, 255, 0.5 );
+    background: rgba( 255, 255, 255, 0.7 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.8 );
     backdrop-filter: blur( 1.5px );
     -webkit-backdrop-filter: blur( 1.5px );
@@ -30,7 +26,7 @@
 
 /* logo */
 .logo_header {
-    width: 250px;
+    width: 230px;
     height: auto;
 }
 
@@ -55,7 +51,28 @@
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 80px;
+    line-height: 70px;
+    position: relative;
+}
+
+.menu li a::after{
+    content:"";
+    background-color: var(--text-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 11px);
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu a:hover::after{
+    opacity: 0.8;
+}
+
+.menu a:hover{
+    color: var(--secundary-color);
 }
 
 /* anulo los botones responsive en nomobile */
@@ -69,8 +86,8 @@
 
     /* logo */
     .logo_header {
-        width: 207px;
-        height: 100px;
+        width: 130px;
+        height: auto;
     }
 
     /* menu */
@@ -80,7 +97,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         align-items: center;
         background-color: var(--menu-mobile-backgorund-color);
         overflow-y: auto;
@@ -96,7 +113,7 @@
     }
 
     .menu li a {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .open-menu,
@@ -109,12 +126,20 @@
 
     .close-menu{
         align-self: flex-end;
-        padding: 40px 15px;
+        padding: 20px 15px;
     }
 
     .menu_abrir {
         opacity: 1;
         pointer-events: all;
+    }
+
+    .menu li a::after{
+        content: none;
+    }
+    
+    .menu li a:hover{
+        color: var(--secundary-color);
     }
 
 }
