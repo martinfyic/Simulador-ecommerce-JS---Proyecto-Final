@@ -76,7 +76,7 @@ function comprar() {
                 graciasCompra()
                 let formulario = document.getElementById("datos-formulario");
                 formulario.innerHTML = "";
-                formulario.innerHTML = `<p class="text-center fs-4 mt-5">Gracias por tu compra <strong>${nombreform}!</strong> Entregaremos tu pedido a la dirección <strong>${direccionform}</strong> en las próximas 48hs, te anviamos todos los detalles al correo <strong>${mailform}</strong> </p>`;
+                formulario.innerHTML = `<p class="text-center fs-4 mt-5">Gracias por tu compra <strong>${nombreform}!</strong> Entregaremos tu pedido a la dirección <strong>${direccionform}</strong> en las próximas 48hs, te enviamos todos los detalles al correo <strong>${mailform}</strong> </p>`;
                 setTimeout(() => {
                     window.location.href = "./index.html"
                 }, 9000)
