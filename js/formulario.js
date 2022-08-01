@@ -7,6 +7,8 @@ class DatosForm {
     }
 }
 
+
+
 //Terminar compra
 function comprar() {
     Swal.fire({
@@ -27,6 +29,9 @@ function comprar() {
             let divTel = document.getElementById("telError");
             let divDire = document.getElementById("direError");
             let divNroTc = document.getElementById("tcVacia");
+            let divFormato = document.getElementById("mailformato");
+            let formato = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+            let esValido = formato.test(mail);
 
             if (mail == "") {
                 divMail.innerHTML = `<p class="text-center fs-6 text text-danger"> Debes completar todos los campo </p>`;
@@ -34,6 +39,14 @@ function comprar() {
             } else {
                 divMail.innerHTML = "";
             }
+
+            if (esValido !== true) {
+                divFormato.innerHTML = `<p class="text-center fs-6 text text-danger"> Formato de mail incorrecto </p>`;
+                return false;
+            } else {
+                divFormato.innerHTML = ``;
+            }
+
             if (nombre == "") {
                 divNombre.innerHTML = `<p class="text-center fs-6 text text-danger"> Debes completar todos los campo </p>`;
                 return false;
@@ -58,12 +71,11 @@ function comprar() {
             } else {
                 divNroTc.innerHTML = "";
             }
-            if (mail !== "" || nombre !== "" || telefono !== "" || direccion !== "" || tarjetaDeCredito !== "" || tarjetaDeCredito !== "unknown") {
+            if (esValido !== true || mail !== "" || nombre !== "" || telefono !== "" || direccion !== "" || tarjetaDeCredito !== "" || tarjetaDeCredito !== "unknown") {
                 let usuario = new DatosForm(mail, nombre, telefono, direccion);
                 let {
                     mailform,
                     nombreform,
-                    telefonoform,
                     direccionform
                 } = usuario;
                 document.getElementById("Input_email").value = "";
