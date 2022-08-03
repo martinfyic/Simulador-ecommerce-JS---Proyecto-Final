@@ -29,10 +29,10 @@ const herohtml = document.getElementById("contenedor_hero");
 fetch(`./JSON/heros.json`)
     .then((res) => res.json())
     .then((respuesta) => {
-            respuesta.forEach((hero) => {
-                let div = document.createElement("div");
-                div.className = "heros";
-                div.innerHTML = `
+        respuesta.forEach((hero) => {
+            let div = document.createElement("div");
+            div.className = "heros";
+            div.innerHTML = `
                 <section class="container py-5">
                 <div class="row">
                 <picture class="col d-flex justify-content-center">
@@ -41,8 +41,8 @@ fetch(`./JSON/heros.json`)
                 </div>
                 </section>
                 `;
-                herohtml.appendChild(div);
-            });
+            herohtml.appendChild(div);
+        });
     })
 
 //Renderizado de productos Retro StreetWear
@@ -69,8 +69,6 @@ function dibujarProductosRetro() {
 
     document.getElementById("contenedor_cards_retro").innerHTML = contenidoCard;
 }
-
-
 
 actualizarBtnCarrito();
 dibujarProductos();
