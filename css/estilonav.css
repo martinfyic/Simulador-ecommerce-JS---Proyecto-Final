@@ -53,22 +53,7 @@
     text-transform: uppercase;
     line-height: 70px;
     position: relative;
-}
-
-.menu li a::after{
-    content:"";
-    background-color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    top: calc(100% + 11px);
-    width: 100%;
-    height: 2px;
-    opacity: 0;
     transition: all 0.3s;
-}
-
-.menu a:hover::after{
-    opacity: 0.8;
 }
 
 .menu a:hover{
@@ -133,10 +118,6 @@
         pointer-events: all;
     }
 
-    .menu li a::after{
-        content: none;
-    }
-    
     .menu li a:hover{
         color: var(--secundary-color);
     }
