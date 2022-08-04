@@ -2,7 +2,7 @@
 
 Proyecto creado para el curso de JavaScript CODERHOUSE
 
-link de deploy ![WEB](https://simulador-ecommerce-js.netlify.app/) 
+link de deploy [WEB](https://simulador-ecommerce-js.netlify.app/) 
 
 ![JavaScript CODERHOUSE](https://simulador-ecommerce-js.netlify.app/img/hero_1.jpeg)
 
