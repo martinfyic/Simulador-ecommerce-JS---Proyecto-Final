@@ -1,5 +1,14 @@
+function retornarProdLocalS() {
+    return JSON.parse(localStorage.getItem("productos")) || [];
+}
+
+function buscarProd(id) {
+    let productos = retornarProdLocalS();
+    return productos.find((x) => x.id == id);
+}
+
 function retornarProdCarrito() {
-    return JSON.parse(localStorage.getItem("carrito")) || []; 
+    return JSON.parse(localStorage.getItem("carrito")) || [];
 }
 
 function guardarProdCarrito(productos) {
@@ -35,58 +44,59 @@ function actualizarBtnCarrito() {
 
 function vaciarCarrito() {
     Swal.fire({
-        title: 'Estas seguro?',
+        title: "Estas seguro?",
         text: "Se eliminaran todos los articulos!",
         showCancelButton: true,
-        confirmButtonColor: '#d3d3d4',
-        cancelButtonColor: '#000000',
-        confirmButtonText: 'Si, eliminar!'
+        confirmButtonColor: "#d3d3d4",
+        cancelButtonColor: "#000000",
+        confirmButtonText: "Si, eliminar!",
     }).then((result) => {
         if (result.isConfirmed) {
-            let timerInterval
+            let timerInterval;
             Swal.fire({
-                title: 'Eliminando articulos!',
-                html: 'La cesta se vaciara en <b></b> milisegundos.',
+                title: "Eliminando articulos!",
+                html: "La cesta se vaciara en <b></b> milisegundos.",
                 timer: 1500,
                 timerProgressBar: true,
                 didOpen: () => {
-                    Swal.showLoading()
-                    const b = Swal.getHtmlContainer().querySelector('b')
+                    Swal.showLoading();
+                    const b = Swal.getHtmlContainer().querySelector("b");
                     timerInterval = setInterval(() => {
-                        b.textContent = Swal.getTimerLeft()
-                    }, 100)
+                        b.textContent = Swal.getTimerLeft();
+                    }, 100);
                 },
                 willClose: () => {
-                    clearInterval(timerInterval)
-                }
+                    clearInterval(timerInterval);
+                },
             }).then((result) => {
                 if (result.dismiss === Swal.DismissReason.timer) {
                 }
-            })
+            });
             localStorage.removeItem("carrito");
             actualizarBtnCarrito();
             dibujarCarrito();
         }
-    })
+    });
 }
-
 
 function agregarAlCarrito(id) {
     let productos_carrito = retornarProdCarrito();
-    let articulo = productos_carrito.findIndex(x => x.id == id);
+    let articulo = productos_carrito.findIndex((x) => x.id == id);
 
-    (articulo > -1) ? productos_carrito[articulo].cantidad += 1 : (producto = buscarProd(id), producto.cantidad = 1, productos_carrito.push(producto) ) 
+    articulo > -1
+        ? (productos_carrito[articulo].cantidad += 1)
+        : ((producto = buscarProd(id)),
+          (producto.cantidad = 1),
+          productos_carrito.push(producto));
 
     guardarProdCarrito(productos_carrito);
     actualizarBtnCarrito();
-    itemAgregado()
+    itemAgregado();
 }
-
-
 
 function eliminarDelCarrito(id) {
     let productos_carrito = retornarProdCarrito();
-    let prodEliminado = productos_carrito.findIndex(x => x.id == id)
+    let prodEliminado = productos_carrito.findIndex((x) => x.id == id);
     productos_carrito[prodEliminado].cantidad -= 1;
 
     if (productos_carrito[prodEliminado].cantidad == 0) {
