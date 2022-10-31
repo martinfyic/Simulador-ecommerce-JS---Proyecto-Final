@@ -30,7 +30,9 @@ De lo contrario puedes descargar directamente en archivo ZIP
 
 ## `El proyecto fue creado con`
 
-![Javascript](https://www.svgrepo.com/show/355081/js.svg) ![HTML5](https://www.svgrepo.com/show/373669/html.svg) ![CSS3](https://www.svgrepo.com/show/373535/css.svg)
+[<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" width="48">](https://developer.mozilla.org/es/docs/Web/HTML)
+[<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" width="48">](https://www.w3schools.com/css/)
+[<img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="48">](https://www.javascript.com/)
 
 ## `Contacto`
 
