@@ -19,7 +19,7 @@ Para el deploy utilice [netlify](https://www.netlify.com) por lo práctico que 
 Si quieres clonar este repo lo puedes hacer con el siguiente comando
 
 ```
-$ git clone https://github.com/martinfyic/Simulador-ecommerce-JS---Proyecto-Final.git
+$ git clone https://github.com/martinfyic/simulador-ecommerce-jsvanilla.git
 ```
 
 De lo contrario puedes descargar directamente en archivo ZIP
@@ -28,5 +28,16 @@ De lo contrario puedes descargar directamente en archivo ZIP
 
 ![JavaScript CODERHOUSE](https://simulador-ecommerce-js.netlify.app/img/hero_1.jpeg)
 
-El proyecto fue creado con: **Vanilla Javascript** | **HTML** | **CSS** |**BOOTSTRAP 5**
+## `El proyecto fue creado con`
+
+**Vanilla Javascript** | **HTML** | **CSS** |**BOOTSTRAP 5**
+
+## `Contacto`
+
+Agradezco mucho los feedback, considero que es la forma de retroalimentarse y seguir creciendo, para eso te dejo como contactarme
+
+- email: martin.f.yic@gmail.com
+- LinkedIn: https://www.linkedin.com/in/martin-ferreira-yic/
+
+Desde ya muchas gracias!
 
