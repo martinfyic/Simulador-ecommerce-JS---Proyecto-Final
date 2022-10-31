@@ -26,11 +26,11 @@ De lo contrario puedes descargar directamente en archivo ZIP
 
 ## `Imagenes de la Web`
 
-![JavaScript CODERHOUSE](https://simulador-ecommerce-js.netlify.app/img/hero_1.jpeg)
+![JavaScript CODERHOUSE](https://simulador-ecommerce-js.netlify.app/img/hero_1.jpeg) 
 
 ## `El proyecto fue creado con`
 
-![Javascript](https://www.svgrepo.com/show/355081/js.svg)
+![Javascript](https://www.svgrepo.com/show/355081/js.svg) ![HTML5](https://www.svgrepo.com/show/373669/html.svg) ![CSS3](https://www.svgrepo.com/show/373535/css.svg)
 
 ## `Contacto`
 
