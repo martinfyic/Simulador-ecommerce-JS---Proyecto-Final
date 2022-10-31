@@ -30,7 +30,7 @@ De lo contrario puedes descargar directamente en archivo ZIP
 
 ## `El proyecto fue creado con`
 
-**Vanilla Javascript** | **HTML** | **CSS** |**BOOTSTRAP 5**
+![Javascript](https://www.svgrepo.com/show/355081/js.svg)
 
 ## `Contacto`
 
