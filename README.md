@@ -26,7 +26,10 @@ De lo contrario puedes descargar directamente en archivo ZIP
 
 ## `Imagenes de la Web`
 
-![JavaScript CODERHOUSE](https://simulador-ecommerce-js.netlify.app/img/hero_1.jpeg) 
+![image-1](https://i.ibb.co/pZqPGbY/Captura-1.png)
+![image-2](https://i.ibb.co/T0rZLCm/Captura-2.png)
+![image-3](https://i.ibb.co/XVK2g7Y/Captura-3.png)
+![image-4](https://i.ibb.co/0QX307c/Captura-4.png)
 
 ## `El proyecto fue creado con`
 
