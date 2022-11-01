@@ -4,7 +4,7 @@ Este proyecto fue realizado durante el curso de Javascript en Coderhouse, es mi 
 
 ## `En el proyecto encontraras`
 
-- Manipulación de DOM
+- Manipulación del DOM
 - LocalStorage
 - Carrito de compras
 - Eventos
