@@ -8,6 +8,7 @@ Este proyecto fue realizado durante el curso de Javascript en Coderhouse, es mi 
 - LocalStorage
 - Carrito de compras
 - Eventos
+- Librerias [sweetalert](https://sweetalert2.github.io/) y [Toastify JS](https://apvarun.github.io/toastify-js/)
 - etc
 
 ## `Deploy`
